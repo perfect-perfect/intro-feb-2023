@@ -36,3 +36,11 @@ C++ and Visual Basic
     - Contained in an *Assembly* 
         - An Assembly is a wad of compiled .NET code *and* metadata about what types are in that assembly
 
+## Demo of Building a .NET app
+*rough demo, we don't have to understand everything*
+* dotnet new console -o Finger
+* Program.cs is the code file
+* Finger.csproj is the file that 
+    * sets the rules for the project
+
+
