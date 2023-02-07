@@ -3,6 +3,7 @@ using Marten;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// This is really bad. Do not hard-code configuration.
 var connectionString = "host=localhost;database=status_dev;password=TokyoJoe138!;username=postgres;port=5432";
 
 builder.Services.AddMarten(options =>
