@@ -30,6 +30,7 @@ public class StringCalculatorTests
     [InlineData("1,2,3", 6)]
     [InlineData("6,60,100", 166)]
     [InlineData("1\n2,3", 6)]
+    [InlineData("//;\n;2", 3)]
     public void MultipleDigits(string numbers, int expected)
     {
         var calculator = new StringCalculator();
