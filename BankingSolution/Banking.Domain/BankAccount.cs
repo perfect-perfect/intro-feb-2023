@@ -3,7 +3,8 @@
 public class BankAccount
 {
     private decimal _balance = 5000M; // State - "Fields" variable
-    public void Deposit(decimal amountToDeposit)
+    // virtual means I am giving permission for any class to override the method Deposit
+    public virtual void Deposit(decimal amountToDeposit)
     {
         _balance += amountToDeposit;
     }
