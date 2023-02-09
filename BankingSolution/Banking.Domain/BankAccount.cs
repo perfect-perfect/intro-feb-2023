@@ -2,12 +2,10 @@
 
 public class BankAccount
 {
-    private decimal _balance = 5000M; // State - "Fields" variable
-    // example of interfaces
+    private decimal _balance = 5000M; // State - "Fields" variable.
     private ICanCalculateAccountBonuses _bonusCalculator;
 
-    // this is a constructor. Constructors are for Required Dependences when creating a class
-    // this means we have to include a bonus calculator where we create a new BankAccount
+    // Constructors are for REQUIRED DEPENDENCIES when creating a class.
     public BankAccount(ICanCalculateAccountBonuses bonusCalculator)
     {
         _bonusCalculator = bonusCalculator;
@@ -15,7 +13,7 @@ public class BankAccount
 
     public void Deposit(decimal amountToDeposit)
     {
-        // Write the code you wish you had
+        // Write the code you wish you had. (WTCYWYH)
         decimal bonus = _bonusCalculator.GetDepositBonusFor(_balance, amountToDeposit);
         _balance += amountToDeposit + bonus;
     }
@@ -30,6 +28,7 @@ public class BankAccount
         if (NotOverdraft(amountToWithdraw))
         {
             _balance -= amountToWithdraw;
+
         }
         else
         {

@@ -2,9 +2,11 @@
 public class MakingWithdrawals
 {
     private BankAccount _account;
-    private decimal _openingBalance; public MakingWithdrawals()
+    private decimal _openingBalance;
+
+    public MakingWithdrawals()
     {
-        _account = new BankAccount(new DummyBonusCalculator);
+        _account = new BankAccount(new DummyBonusCalculator());
         _openingBalance = _account.GetBalance();
     }
 
@@ -13,7 +15,10 @@ public class MakingWithdrawals
     [InlineData(183.23)]
     public void MakingAWithdrawalDecreasesBalance(decimal amountToWithdraw)
     {
-        _account.Withdraw(amountToWithdraw); Assert.Equal(_openingBalance - amountToWithdraw, _account.GetBalance());
+
+        _account.Withdraw(amountToWithdraw);
+
+        Assert.Equal(_openingBalance - amountToWithdraw, _account.GetBalance());
     }
 
     [Fact]
@@ -22,14 +27,14 @@ public class MakingWithdrawals
         var amountToWithdraw = _openingBalance + .01M;
         try
         {
-            _account.Withdraw(amountToWithdraw);
+            _account.Withdraw(amountToWithdraw); // sus!
         }
         catch (AccountOverdraftException)
         {
-
-            // was expecting that... carry on.
+            // was expecting that... carry on. 
         }
         Assert.Equal(_openingBalance, _account.GetBalance());
+
     }
 
     [Fact]
