@@ -10,24 +10,25 @@ public class BankAccount
 
     public decimal GetBalance()
     {
-  
-        return _balance; // Hard code it "Sliming"
+        return _balance;
     }
 
     public void Withdraw(decimal amountToWithdraw)
     {
-        // CTRL-R + CTRL-M ==> to take a a thing and extract it into a new mothod.
-        if (NotOverDraft(amountToWithdraw))
+        if (NotOverdraft(amountToWithdraw))
         {
             _balance -= amountToWithdraw;
-        } else
+        }
+        else
         {
             throw new AccountOverdraftException();
         }
 
     }
 
-    private bool NotOverDraft(decimal amountToWithdraw)
+
+    // "Never type private, always refactor to it" - Corey Haines.
+    private bool NotOverdraft(decimal amountToWithdraw)
     {
         return _balance >= amountToWithdraw;
     }
