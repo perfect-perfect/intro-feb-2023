@@ -4,7 +4,7 @@ public class MakingWithdrawals
     private BankAccount _account;
     private decimal _openingBalance; public MakingWithdrawals()
     {
-        _account = new BankAccount();
+        _account = new BankAccount(new DummyBonusCalculator);
         _openingBalance = _account.GetBalance();
     }
 

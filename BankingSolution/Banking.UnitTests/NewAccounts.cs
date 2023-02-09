@@ -8,7 +8,7 @@ public class NewAccounts
     public void NewAccountsHaveTheCorrectOpeningBalance()
     {
         // Given I have a brand new bank account
-        var account = new BankAccount();
+        var account = new BankAccount(new DummyBonusCalculator);
 
         // When I ask that account for it's balance
         // we use decimal data type so it knows that Get.Balance() will return a variable
