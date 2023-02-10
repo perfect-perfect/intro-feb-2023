@@ -4,6 +4,8 @@
 public class BankAccount
 {
     private decimal _balance = 5000M; // State - "Fields" variable.
+    // We declare a private variable??
+    // our private thing runs the interface ICanCalculateAccountBonuses and assigns the interfaces result to the variable name `_bonusCalculator` 
     private ICanCalculateAccountBonuses _bonusCalculator;
 
     // Constructors are for REQUIRED DEPENDENCIES when creating a class.
