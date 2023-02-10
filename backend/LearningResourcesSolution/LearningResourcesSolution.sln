@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningResourcesApi", "LearningResourcesApi\LearningResourcesApi.csproj", "{E4B62ACD-40A0-42F9-8EF1-B084F176F179}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningResourcesApi.integrationTests", "LearningResourcesApi.integrationTests\LearningResourcesApi.integrationTests.csproj", "{F28B8669-1871-4431-B9C3-4B8BB3DE78AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4B62ACD-40A0-42F9-8EF1-B084F176F179}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4B62ACD-40A0-42F9-8EF1-B084F176F179}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4B62ACD-40A0-42F9-8EF1-B084F176F179}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4B62ACD-40A0-42F9-8EF1-B084F176F179}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F28B8669-1871-4431-B9C3-4B8BB3DE78AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F28B8669-1871-4431-B9C3-4B8BB3DE78AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F28B8669-1871-4431-B9C3-4B8BB3DE78AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F28B8669-1871-4431-B9C3-4B8BB3DE78AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E1C6EE11-F390-4F33-B678-4B24F22CDB14}
+	EndGlobalSection
+EndGlobal

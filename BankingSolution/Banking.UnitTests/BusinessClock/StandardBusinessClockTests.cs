@@ -12,6 +12,7 @@ public class StandardBusinessClockTests
         IProvideTheBusinessClock clock = new StandardBusinessClock(stubbedClock.Object);
 
         Assert.True(clock.IsDuringBusinessHours());
+
     }
 
     [Fact]

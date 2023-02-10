@@ -13,9 +13,18 @@ public class BankAccount
 
     public void Deposit(decimal amountToDeposit)
     {
+        GuardNoNegativeAmountsForTransactions(amountToDeposit);
         // Write the code you wish you had. (WTCYWYH)
         decimal bonus = _bonusCalculator.GetDepositBonusFor(_balance, amountToDeposit);
         _balance += amountToDeposit + bonus;
+    }
+
+    private static void GuardNoNegativeAmountsForTransactions(decimal amountToDeposit)
+    {
+        if (amountToDeposit < 0)
+        {
+            throw new NoNegativeNumbersException();
+        }
     }
 
     public decimal GetBalance()
@@ -25,16 +34,22 @@ public class BankAccount
 
     public void Withdraw(decimal amountToWithdraw)
     {
-        if (NotOverdraft(amountToWithdraw))
-        {
-            _balance -= amountToWithdraw;
 
-        }
-        else
+        GuardNoNegativeAmountsForTransactions(amountToWithdraw);
+        GuardNoOverdraft(amountToWithdraw);
+
+        _balance -= amountToWithdraw;
+
+
+
+    }
+
+    private void GuardNoOverdraft(decimal amountToWithdraw)
+    {
+        if (amountToWithdraw > _balance)
         {
             throw new AccountOverdraftException();
         }
-
     }
 
 

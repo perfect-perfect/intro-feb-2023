@@ -9,7 +9,7 @@ public class StandardBonusCalculatorTestsDuringBusinessHours
         stubbedClock.Setup(c => c.IsDuringBusinessHours()).Returns(true);
         _calculator = new StandardBonusCalculator(stubbedClock.Object);
     }
-
+    
     [Fact]
     public void UnderCutoffGetNoBonus()
     {
