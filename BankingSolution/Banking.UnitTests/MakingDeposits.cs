@@ -5,6 +5,7 @@ public class MakingDeposits
     [Fact]
     public void DepositingMoneyIncreasesTheBalance()
     {
+         
         // Given
         var account = new BankAccount(new DummyBonusCalculator());
         var openingBalance = account.GetBalance();

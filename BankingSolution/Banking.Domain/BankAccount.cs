@@ -1,5 +1,6 @@
 ﻿namespace Banking.Domain;
 
+// a class is a container we store a bunch of code we want executed
 public class BankAccount
 {
     private decimal _balance = 5000M; // State - "Fields" variable.
