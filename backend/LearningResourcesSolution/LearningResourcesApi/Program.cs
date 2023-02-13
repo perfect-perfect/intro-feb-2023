@@ -2,7 +2,7 @@ using LearningResourcesApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Add services/modules to the container.
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -11,6 +11,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<ISystemTime, SystemTime>();
 var app = builder.Build();
 
+// Middleware
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

@@ -7,6 +7,7 @@ public class StatusResourceTests
     [Fact]
     public async Task TheStatusResource()
     {
+        // alba is a tool for better integration teesting against ASP.Net Core Applications
         await using  var host = await AlbaHost.For<Program>();
 
         var response = await host.Scenario(api => // Integration test - usually has many steps.

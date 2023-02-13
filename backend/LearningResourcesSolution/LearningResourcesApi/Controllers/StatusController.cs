@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LearningResourcesApi.Controllers;
 
+// this class inherits ControllerBase which extends some useful http request methods
 public class StatusController : ControllerBase
 {
     private ISystemTime _systemTime;
